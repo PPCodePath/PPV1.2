@@ -20,6 +20,7 @@
 		04A9693C1AADBAD80070A862 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9693B1AADBAD80070A862 /* User.m */; };
 		04A9693F1AADBAD80070A862 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9693E1AADBAD80070A862 /* Transaction.m */; };
 		04A969781AADC5C70070A862 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A969771AADC5C70070A862 /* CoreDataHelper.m */; };
+		04A9697A1AADD0B20070A862 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A969791AADD0B20070A862 /* FacebookSDK.framework */; };
 		FBD77DFA5CE5184B63AC03FF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 782F2EAA09FE5F5500556F53 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		04A9693E1AADBAD80070A862 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Transaction.m; path = PPV12/Models/Transaction.m; sourceTree = "<group>"; };
 		04A969761AADC5C70070A862 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataHelper.h; path = PPV12/Helpers/CoreDataHelper.h; sourceTree = "<group>"; };
 		04A969771AADC5C70070A862 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataHelper.m; path = PPV12/Helpers/CoreDataHelper.m; sourceTree = "<group>"; };
+		04A969791AADD0B20070A862 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		782F2EAA09FE5F5500556F53 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F9D604F0E858AB94263D40 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E33F4E34AC0416F15641FA3C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			files = (
 				048ED48B1AAD539700D2E59E /* CoreData.framework in Frameworks */,
 				FBD77DFA5CE5184B63AC03FF /* libPods.a in Frameworks */,
+				04A9697A1AADD0B20070A862 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +181,7 @@
 		87775C7D1BCE771F62E39F43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04A969791AADD0B20070A862 /* FacebookSDK.framework */,
 				048ED48A1AAD539700D2E59E /* CoreData.framework */,
 				782F2EAA09FE5F5500556F53 /* libPods.a */,
 			);
@@ -443,6 +447,10 @@
 			baseConfigurationReference = B2F9D604F0E858AB94263D40 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/cmamuad/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = PPV12/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -454,6 +462,10 @@
 			baseConfigurationReference = E33F4E34AC0416F15641FA3C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/cmamuad/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = PPV12/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

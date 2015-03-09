@@ -20,19 +20,14 @@ PODS:
   - AFNetworking/UIKit (2.5.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Realm (0.90.6):
-    - Realm/Headers (= 0.90.6)
-  - Realm/Headers (0.90.6)
   - SVPullToRefresh (0.4.1)
 
 DEPENDENCIES:
   - AFNetworking
-  - Realm
   - SVPullToRefresh
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
-  Realm: 6c3facc11964ab9f828f47de6d0e9bf9c4d9c818
   SVPullToRefresh: d5161ebc833a38b465364412e5e307ca80bbb190
 
 COCOAPODS: 0.35.0
