@@ -12,11 +12,13 @@
 		0453A09C1AACF86F00F692F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0453A09B1AACF86F00F692F9 /* Images.xcassets */; };
 		0453A09F1AACF86F00F692F9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0453A09D1AACF86F00F692F9 /* LaunchScreen.xib */; };
 		0453A0AB1AACF86F00F692F9 /* PPV12Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0453A0AA1AACF86F00F692F9 /* PPV12Tests.m */; };
-		0453A0B71AACF90A00F692F9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0453A0B51AACF90A00F692F9 /* LoginViewController.m */; };
-		0453A0B81AACF90A00F692F9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0453A0B61AACF90A00F692F9 /* LoginViewController.xib */; };
 		048ED4741AACFFB600D2E59E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 048ED4731AACFFB600D2E59E /* User.m */; };
 		048ED4771AACFFDD00D2E59E /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 048ED4761AACFFDD00D2E59E /* Transaction.m */; };
 		048ED4831AAD1A4200D2E59E /* UserModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 048ED4821AAD1A4200D2E59E /* UserModelTest.m */; };
+		CE63535D1AAD2295004D2BF0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE63535B1AAD2295004D2BF0 /* LoginViewController.m */; };
+		CE63535E1AAD2295004D2BF0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE63535C1AAD2295004D2BF0 /* LoginViewController.xib */; };
+		CE63536C1AAD25AA004D2BF0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE63536A1AAD25AA004D2BF0 /* MainViewController.m */; };
+		CE63536D1AAD25AA004D2BF0 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE63536B1AAD25AA004D2BF0 /* MainViewController.xib */; };
 		FBD77DFA5CE5184B63AC03FF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 782F2EAA09FE5F5500556F53 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -41,9 +43,6 @@
 		0453A0A41AACF86F00F692F9 /* PPV12Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PPV12Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0453A0A91AACF86F00F692F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0453A0AA1AACF86F00F692F9 /* PPV12Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPV12Tests.m; sourceTree = "<group>"; };
-		0453A0B41AACF90A00F692F9 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = PPV12/LoginViewController.h; sourceTree = "<group>"; };
-		0453A0B51AACF90A00F692F9 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = PPV12/LoginViewController.m; sourceTree = "<group>"; };
-		0453A0B61AACF90A00F692F9 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = PPV12/LoginViewController.xib; sourceTree = "<group>"; };
 		048ED4721AACFFB600D2E59E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = PPV12/Models/User.h; sourceTree = "<group>"; };
 		048ED4731AACFFB600D2E59E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = PPV12/Models/User.m; sourceTree = "<group>"; };
 		048ED4751AACFFDD00D2E59E /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Transaction.h; path = PPV12/Models/Transaction.h; sourceTree = "<group>"; };
@@ -51,6 +50,12 @@
 		048ED4821AAD1A4200D2E59E /* UserModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserModelTest.m; path = PPV12Tests/UserModelTest.m; sourceTree = "<group>"; };
 		782F2EAA09FE5F5500556F53 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F9D604F0E858AB94263D40 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CE63535A1AAD2295004D2BF0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = PPV12/ViewControllers/LoginViewController.h; sourceTree = "<group>"; };
+		CE63535B1AAD2295004D2BF0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = PPV12/ViewControllers/LoginViewController.m; sourceTree = "<group>"; };
+		CE63535C1AAD2295004D2BF0 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = PPV12/ViewControllers/LoginViewController.xib; sourceTree = "<group>"; };
+		CE6353691AAD25AA004D2BF0 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = PPV12/ViewControllers/MainViewController.h; sourceTree = "<group>"; };
+		CE63536A1AAD25AA004D2BF0 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = PPV12/ViewControllers/MainViewController.m; sourceTree = "<group>"; };
+		CE63536B1AAD25AA004D2BF0 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = PPV12/ViewControllers/MainViewController.xib; sourceTree = "<group>"; };
 		E33F4E34AC0416F15641FA3C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,11 +81,9 @@
 		0453A0821AACF86F00F692F9 = {
 			isa = PBXGroup;
 			children = (
+				CE6353591AAD21FA004D2BF0 /* VIewControllers */,
 				048ED4821AAD1A4200D2E59E /* UserModelTest.m */,
 				048ED4711AACFCA600D2E59E /* Models */,
-				0453A0B41AACF90A00F692F9 /* LoginViewController.h */,
-				0453A0B51AACF90A00F692F9 /* LoginViewController.m */,
-				0453A0B61AACF90A00F692F9 /* LoginViewController.xib */,
 				0453A08D1AACF86F00F692F9 /* PPV12 */,
 				0453A0A71AACF86F00F692F9 /* PPV12Tests */,
 				0453A08C1AACF86F00F692F9 /* Products */,
@@ -162,6 +165,19 @@
 				782F2EAA09FE5F5500556F53 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE6353591AAD21FA004D2BF0 /* VIewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE63535A1AAD2295004D2BF0 /* LoginViewController.h */,
+				CE63535B1AAD2295004D2BF0 /* LoginViewController.m */,
+				CE63535C1AAD2295004D2BF0 /* LoginViewController.xib */,
+				CE6353691AAD25AA004D2BF0 /* MainViewController.h */,
+				CE63536A1AAD25AA004D2BF0 /* MainViewController.m */,
+				CE63536B1AAD25AA004D2BF0 /* MainViewController.xib */,
+			);
+			name = VIewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,9 +262,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE63535E1AAD2295004D2BF0 /* LoginViewController.xib in Resources */,
 				0453A09F1AACF86F00F692F9 /* LaunchScreen.xib in Resources */,
 				0453A09C1AACF86F00F692F9 /* Images.xcassets in Resources */,
-				0453A0B81AACF90A00F692F9 /* LoginViewController.xib in Resources */,
+				CE63536D1AAD25AA004D2BF0 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,10 +317,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				048ED4741AACFFB600D2E59E /* User.m in Sources */,
+				CE63536C1AAD25AA004D2BF0 /* MainViewController.m in Sources */,
 				0453A0941AACF86F00F692F9 /* AppDelegate.m in Sources */,
+				CE63535D1AAD2295004D2BF0 /* LoginViewController.m in Sources */,
 				0453A0911AACF86F00F692F9 /* main.m in Sources */,
 				048ED4771AACFFDD00D2E59E /* Transaction.m in Sources */,
-				0453A0B71AACF90A00F692F9 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

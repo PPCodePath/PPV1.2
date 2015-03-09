@@ -3,6 +3,7 @@ platform :ios, '8.0'
 pod "AFNetworking"
 pod "SVPullToRefresh"
 pod "Realm"
+pod 'Venmo-iOS-SDK'
 
 
 target 'PPV12' do

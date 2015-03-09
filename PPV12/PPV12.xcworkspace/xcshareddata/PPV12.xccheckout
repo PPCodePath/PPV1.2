@@ -11,17 +11,17 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>BE5E83283161FC768704F662D3E72C7AB54BF587</key>
-		<string>github.com:RaphaelTurtlePower/PPV1.2.git</string>
+		<string>github.com:xlzhsteven/PPV1.2.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>PPV1.2/PPV12/PPV12.xcworkspace</string>
+	<string>PPV12/PPV12.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>BE5E83283161FC768704F662D3E72C7AB54BF587</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:RaphaelTurtlePower/PPV1.2.git</string>
+	<string>github.com:xlzhsteven/PPV1.2.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
