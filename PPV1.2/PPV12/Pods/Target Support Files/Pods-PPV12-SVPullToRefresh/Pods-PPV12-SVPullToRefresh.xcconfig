@@ -1,1 +1,0 @@
-PODS_PPV___SVPULLTOREFRESH_OTHER_LDFLAGS = -framework "QuartzCore"
