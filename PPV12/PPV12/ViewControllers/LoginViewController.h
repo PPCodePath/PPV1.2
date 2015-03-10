@@ -2,7 +2,7 @@
 //  LoginViewController.h
 //  PPV12
 //
-//  Created by Mamuad, Christian on 3/8/15.
+//  Created by Xiaolong Zhang on 3/9/15.
 //  Copyright (c) 2015 Mamuad, Christian. All rights reserved.
 //
 

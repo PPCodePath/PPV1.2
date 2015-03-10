@@ -20,19 +20,27 @@ PODS:
   - AFNetworking/UIKit (2.5.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Realm (0.90.6):
-    - Realm/Headers (= 0.90.6)
-  - Realm/Headers (0.90.6)
+  - CMDQueryStringSerialization (0.2.0)
+  - SSKeychain (1.2.2)
   - SVPullToRefresh (0.4.1)
+  - VENCore (3.0.1):
+    - CMDQueryStringSerialization (~> 0.2.0)
+  - Venmo-iOS-SDK (1.3.0):
+    - CMDQueryStringSerialization (~> 0.2.0)
+    - SSKeychain (~> 1.2.2)
+    - VENCore (~> 3.0.0)
 
 DEPENDENCIES:
   - AFNetworking
-  - Realm
   - SVPullToRefresh
+  - Venmo-iOS-SDK
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
-  Realm: 6c3facc11964ab9f828f47de6d0e9bf9c4d9c818
+  CMDQueryStringSerialization: e53570ccbce6004acba30b1c1210e254644cdb92
+  SSKeychain: cc48bd3ad24fcd9125adb9e0d23dd50b8bbd08b9
   SVPullToRefresh: d5161ebc833a38b465364412e5e307ca80bbb190
+  VENCore: 944d7fc21a27670cf57342b35ce3d715ce514ca5
+  Venmo-iOS-SDK: 2915f7c1df71c51025409be9f507a341248b8735
 
 COCOAPODS: 0.35.0

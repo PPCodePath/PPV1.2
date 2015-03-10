@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 #import "LoginViewController.h"
-
+#import <Venmo-iOS-SDK/Venmo.h>
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,11 +19,28 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // Venmo app info
+    [Venmo startWithAppId:@"2431" secret:@"3XA9f8Qc99HxSR9j8mdLtv7vabS8n5yy" name:@"PayPal12"];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen]bounds]];
-    self.window.rootViewController = [[LoginViewController alloc] init];
+    VENUser *user = [[Venmo sharedInstance] session].user;
+    if (user!=nil) {
+        MainViewController *mvc = [[MainViewController alloc] init];
+        UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:mvc];
+        
+        self.window.rootViewController = nvc;
+    } else {
+        self.window.rootViewController = [[LoginViewController alloc] init];
+    }
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    if ([[Venmo sharedInstance] handleOpenURL:url]) {
+        return YES;
+    }
+    return NO;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
