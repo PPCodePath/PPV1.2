@@ -10,6 +10,8 @@
 #import "LoginViewController.h"
 #import <Venmo-iOS-SDK/Venmo.h>
 #import "MainViewController.h"
+#import "ContainerViewController.h"
+#import "MenuViewController.h"
 
 @interface AppDelegate ()
 
@@ -25,10 +27,18 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen]bounds]];
     VENUser *user = [[Venmo sharedInstance] session].user;
     if (user!=nil) {
-        MainViewController *mvc = [[MainViewController alloc] init];
-        UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:mvc];
+        MainViewController *mainViewController = [[MainViewController alloc] init];
+        MenuViewController *menuViewController = [[MenuViewController alloc] init];
         
-        self.window.rootViewController = nvc;
+        UINavigationController *mainViewNavigation = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+        UINavigationController *menuViewNavigation = [[UINavigationController alloc] initWithRootViewController:menuViewController];
+        
+        ContainerViewController *containerViewController = [[ContainerViewController alloc] initWithContentController:mainViewNavigation withMenu:menuViewNavigation];
+        
+        mainViewController.delegate = containerViewController;
+        menuViewController.delegate = containerViewController;
+        
+        self.window.rootViewController = containerViewController;
     } else {
         self.window.rootViewController = [[LoginViewController alloc] init];
     }

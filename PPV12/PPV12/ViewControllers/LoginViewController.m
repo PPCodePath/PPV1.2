@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 #import <Venmo-iOS-SDK/Venmo.h>
 #import "MainViewController.h"
+#import "ContainerViewController.h"
+#import "MenuViewController.h"
 
 @interface LoginViewController ()
 
@@ -32,8 +34,18 @@
                          withCompletionHandler:^(BOOL success, NSError *error) {
                              if (success) {
                                  NSLog(@"success");
-                                 MainViewController *vc = [[MainViewController alloc] init];
-                                 [self presentViewController:vc animated:YES completion:nil];
+                                 MainViewController *mainViewController = [[MainViewController alloc] init];
+                                 MenuViewController *menuViewController = [[MenuViewController alloc] init];
+                                 
+                                 UINavigationController *mainViewNavigation = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+                                 UINavigationController *menuViewNavigation = [[UINavigationController alloc] initWithRootViewController:menuViewController];
+                                 
+                                 ContainerViewController *containerViewController = [[ContainerViewController alloc] initWithContentController:mainViewNavigation withMenu:menuViewNavigation];
+                                 
+                                 mainViewController.delegate = containerViewController;
+                                 menuViewController.delegate = containerViewController;
+                        
+                                 [self presentViewController:containerViewController animated:YES completion:nil];
                              }
                              else {
                                  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Authorization failed"
