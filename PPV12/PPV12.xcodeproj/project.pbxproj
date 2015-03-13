@@ -28,6 +28,9 @@
 		5AB149B41AAFEE8700CCCFFF /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB149B21AAFEE8700CCCFFF /* ProfileViewController.xib */; };
 		5AB149B81AAFEEA900CCCFFF /* TransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB149B61AAFEEA900CCCFFF /* TransactionViewController.m */; };
 		5AB149B91AAFEEA900CCCFFF /* TransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB149B71AAFEEA900CCCFFF /* TransactionViewController.xib */; };
+		5AB149BE1AB0001400CCCFFF /* TransactionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB149BC1AB0001400CCCFFF /* TransactionCell.m */; };
+		5AB149BF1AB0001400CCCFFF /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB149BD1AB0001400CCCFFF /* TransactionCell.xib */; };
+		5AB149C31AB021FF00CCCFFF /* Venmo+Enhanced.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB149C21AB021FF00CCCFFF /* Venmo+Enhanced.m */; };
 		CEEDB9D11AAEC27B00B04B6A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEDB9CF1AAEC27B00B04B6A /* LoginViewController.m */; };
 		CEEDB9D21AAEC27B00B04B6A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEDB9D01AAEC27B00B04B6A /* LoginViewController.xib */; };
 		CEEDB9D61AAEC3B700B04B6A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEDB9D41AAEC3B700B04B6A /* MainViewController.m */; };
@@ -81,6 +84,11 @@
 		5AB149B61AAFEEA900CCCFFF /* TransactionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransactionViewController.m; path = PPV12/ViewControllers/TransactionViewController.m; sourceTree = "<group>"; };
 		5AB149B71AAFEEA900CCCFFF /* TransactionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TransactionViewController.xib; path = PPV12/ViewControllers/TransactionViewController.xib; sourceTree = "<group>"; };
 		5AB149BA1AAFF1BB00CCCFFF /* ContainerViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ContainerViewDelegate.h; path = PPV12/ViewControllers/ContainerViewDelegate.h; sourceTree = "<group>"; };
+		5AB149BB1AB0001400CCCFFF /* TransactionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransactionCell.h; path = PPV12/Views/TransactionCell.h; sourceTree = "<group>"; };
+		5AB149BC1AB0001400CCCFFF /* TransactionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransactionCell.m; path = PPV12/Views/TransactionCell.m; sourceTree = "<group>"; };
+		5AB149BD1AB0001400CCCFFF /* TransactionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TransactionCell.xib; path = PPV12/Views/TransactionCell.xib; sourceTree = "<group>"; };
+		5AB149C11AB021FF00CCCFFF /* Venmo+Enhanced.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Venmo+Enhanced.h"; path = "PPV12/API/Venmo+Enhanced.h"; sourceTree = "<group>"; };
+		5AB149C21AB021FF00CCCFFF /* Venmo+Enhanced.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Venmo+Enhanced.m"; path = "PPV12/API/Venmo+Enhanced.m"; sourceTree = "<group>"; };
 		782F2EAA09FE5F5500556F53 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F9D604F0E858AB94263D40 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CEEDB9CE1AAEC27B00B04B6A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = PPV12/ViewControllers/LoginViewController.h; sourceTree = "<group>"; };
@@ -115,6 +123,7 @@
 		0453A0821AACF86F00F692F9 = {
 			isa = PBXGroup;
 			children = (
+				5AB149C01AB021BD00CCCFFF /* API */,
 				04E4D2031AAFC7A7007FE848 /* Views */,
 				CEEDB9C81AAEC24D00B04B6A /* ViewControllers */,
 				048ED4871AAD4DF700D2E59E /* Model.xcdatamodeld */,
@@ -202,6 +211,9 @@
 				04E4D2041AAFC800007FE848 /* MenuCell.h */,
 				04E4D2051AAFC800007FE848 /* MenuCell.m */,
 				04E4D2061AAFC800007FE848 /* MenuCell.xib */,
+				5AB149BB1AB0001400CCCFFF /* TransactionCell.h */,
+				5AB149BC1AB0001400CCCFFF /* TransactionCell.m */,
+				5AB149BD1AB0001400CCCFFF /* TransactionCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -213,6 +225,15 @@
 				E33F4E34AC0416F15641FA3C /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5AB149C01AB021BD00CCCFFF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5AB149C11AB021FF00CCCFFF /* Venmo+Enhanced.h */,
+				5AB149C21AB021FF00CCCFFF /* Venmo+Enhanced.m */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		87775C7D1BCE771F62E39F43 /* Frameworks */ = {
@@ -336,6 +357,7 @@
 				04E4D2011AAFB334007FE848 /* MenuViewController.xib in Resources */,
 				5AB149B41AAFEE8700CCCFFF /* ProfileViewController.xib in Resources */,
 				04E4D2081AAFC800007FE848 /* MenuCell.xib in Resources */,
+				5AB149BF1AB0001400CCCFFF /* TransactionCell.xib in Resources */,
 				0453A09C1AACF86F00F692F9 /* Images.xcassets in Resources */,
 				CEEDB9D21AAEC27B00B04B6A /* LoginViewController.xib in Resources */,
 				CEEDB9D71AAEC3B700B04B6A /* MainViewController.xib in Resources */,
@@ -396,11 +418,13 @@
 				04E4D1FB1AAFB2DA007FE848 /* ContainerViewController.m in Sources */,
 				0453A0911AACF86F00F692F9 /* main.m in Sources */,
 				04E4D2071AAFC800007FE848 /* MenuCell.m in Sources */,
+				5AB149C31AB021FF00CCCFFF /* Venmo+Enhanced.m in Sources */,
 				CEEDB9D61AAEC3B700B04B6A /* MainViewController.m in Sources */,
 				5AB149B81AAFEEA900CCCFFF /* TransactionViewController.m in Sources */,
 				04A9693C1AADBAD80070A862 /* User.m in Sources */,
 				CEEDB9D11AAEC27B00B04B6A /* LoginViewController.m in Sources */,
 				048ED4891AAD4DF700D2E59E /* Model.xcdatamodeld in Sources */,
+				5AB149BE1AB0001400CCCFFF /* TransactionCell.m in Sources */,
 				04A969781AADC5C70070A862 /* CoreDataHelper.m in Sources */,
 				5AB149B31AAFEE8700CCCFFF /* ProfileViewController.m in Sources */,
 				04E4D2001AAFB334007FE848 /* MenuViewController.m in Sources */,

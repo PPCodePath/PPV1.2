@@ -19,6 +19,8 @@
 @property (nonatomic, retain) NSString * transactionType;
 @property (nonatomic, retain) NSOrderedSet *receiver;
 @property (nonatomic, retain) NSOrderedSet *sender;
+@property (nonatomic, retain) NSString *paymentId;
+@property (nonatomic, retain) NSString* message;
 @end
 
 @interface Transaction (CoreDataGeneratedAccessors)
@@ -43,4 +45,11 @@
 - (void)removeSenderObject:(User *)value;
 - (void)addSender:(NSOrderedSet *)values;
 - (void)removeSender:(NSOrderedSet *)values;
+
+/*
+ Helper methods
+ */
+
+-(id) initWithDictionary:(NSDictionary*) dictionary;
++(NSMutableArray*) initWithArrayOfDictionary:(NSArray*) arr;
 @end

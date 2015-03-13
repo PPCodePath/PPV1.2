@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface TransactionCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *amount;
+@property (weak, nonatomic) IBOutlet UILabel *message;
+@property (weak, nonatomic) IBOutlet UILabel *transactionDisplay;
 
 @end

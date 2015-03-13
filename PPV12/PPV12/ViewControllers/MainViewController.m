@@ -8,7 +8,7 @@
 
 #import "MainViewController.h"
 #import "LoginViewController.h"
-#import <Venmo-iOS-SDK/Venmo.h>
+#import "Venmo+Enhanced.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
 
 @interface MainViewController ()
