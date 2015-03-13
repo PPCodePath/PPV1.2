@@ -25,4 +25,7 @@
 @property (nonatomic, retain) Transaction *transactionsReceived;
 @property (nonatomic, retain) Transaction *transactionsSent;
 
+
+-(id) initWithDictionary:(NSDictionary*) dictionary;
++(NSMutableArray*) initWithArrayOfDictionary:(NSArray*) arr;
 @end

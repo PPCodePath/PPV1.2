@@ -33,6 +33,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Table View Functions
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 20;

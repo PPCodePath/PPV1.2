@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ContainerViewDelegate.h"
 
-@interface TransactionViewController : UIViewController
+@interface TransactionViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) id<ContainerViewDelegate> delegate;
 @end
