@@ -30,7 +30,8 @@
 
 - (IBAction)loginAction:(id)sender {
     [[Venmo sharedInstance] requestPermissions:@[VENPermissionMakePayments,
-                                                 VENPermissionAccessProfile]
+                                                 VENPermissionAccessProfile,
+                                                 VENPermissionAccessFriends]
                          withCompletionHandler:^(BOOL success, NSError *error) {
                              if (success) {
                                  NSLog(@"success");
