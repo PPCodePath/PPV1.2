@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042E9DFF1AB2809900B13034 /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042E9DFD1AB2809900B13034 /* CanvasViewController.m */; };
+		042E9E001AB2809900B13034 /* CanvasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042E9DFE1AB2809900B13034 /* CanvasViewController.xib */; };
 		0453A0911AACF86F00F692F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0453A0901AACF86F00F692F9 /* main.m */; };
 		0453A0941AACF86F00F692F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0453A0931AACF86F00F692F9 /* AppDelegate.m */; };
 		0453A09C1AACF86F00F692F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0453A09B1AACF86F00F692F9 /* Images.xcassets */; };
@@ -24,6 +26,8 @@
 		04E4D2011AAFB334007FE848 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E4D1FF1AAFB334007FE848 /* MenuViewController.xib */; };
 		04E4D2071AAFC800007FE848 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D2051AAFC800007FE848 /* MenuCell.m */; };
 		04E4D2081AAFC800007FE848 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E4D2061AAFC800007FE848 /* MenuCell.xib */; };
+		5A3EEAEA1AB562620003D605 /* BubbleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3EEAE81AB562620003D605 /* BubbleViewController.m */; };
+		5A3EEAEB1AB562620003D605 /* BubbleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3EEAE91AB562620003D605 /* BubbleViewController.xib */; };
 		5AB149B31AAFEE8700CCCFFF /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB149B11AAFEE8700CCCFFF /* ProfileViewController.m */; };
 		5AB149B41AAFEE8700CCCFFF /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB149B21AAFEE8700CCCFFF /* ProfileViewController.xib */; };
 		5AB149B81AAFEEA900CCCFFF /* TransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB149B61AAFEEA900CCCFFF /* TransactionViewController.m */; };
@@ -49,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042E9DFC1AB2809900B13034 /* CanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CanvasViewController.h; path = PPV12/ViewControllers/CanvasViewController.h; sourceTree = "<group>"; };
+		042E9DFD1AB2809900B13034 /* CanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CanvasViewController.m; path = PPV12/ViewControllers/CanvasViewController.m; sourceTree = "<group>"; };
+		042E9DFE1AB2809900B13034 /* CanvasViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CanvasViewController.xib; path = PPV12/ViewControllers/CanvasViewController.xib; sourceTree = "<group>"; };
 		0453A08B1AACF86F00F692F9 /* PPV12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPV12.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0453A08F1AACF86F00F692F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0453A0901AACF86F00F692F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,6 +84,9 @@
 		04E4D2041AAFC800007FE848 /* MenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuCell.h; path = PPV12/Views/MenuCell.h; sourceTree = "<group>"; };
 		04E4D2051AAFC800007FE848 /* MenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuCell.m; path = PPV12/Views/MenuCell.m; sourceTree = "<group>"; };
 		04E4D2061AAFC800007FE848 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuCell.xib; path = PPV12/Views/MenuCell.xib; sourceTree = "<group>"; };
+		5A3EEAE71AB562620003D605 /* BubbleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BubbleViewController.h; path = PPV12/ViewControllers/BubbleViewController.h; sourceTree = "<group>"; };
+		5A3EEAE81AB562620003D605 /* BubbleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BubbleViewController.m; path = PPV12/ViewControllers/BubbleViewController.m; sourceTree = "<group>"; };
+		5A3EEAE91AB562620003D605 /* BubbleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BubbleViewController.xib; path = PPV12/ViewControllers/BubbleViewController.xib; sourceTree = "<group>"; };
 		5AB149B01AAFEE8700CCCFFF /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = PPV12/ViewControllers/ProfileViewController.h; sourceTree = "<group>"; };
 		5AB149B11AAFEE8700CCCFFF /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = PPV12/ViewControllers/ProfileViewController.m; sourceTree = "<group>"; };
 		5AB149B21AAFEE8700CCCFFF /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileViewController.xib; path = PPV12/ViewControllers/ProfileViewController.xib; sourceTree = "<group>"; };
@@ -248,6 +258,9 @@
 		CEEDB9C81AAEC24D00B04B6A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5A3EEAE71AB562620003D605 /* BubbleViewController.h */,
+				5A3EEAE81AB562620003D605 /* BubbleViewController.m */,
+				5A3EEAE91AB562620003D605 /* BubbleViewController.xib */,
 				CEEDB9CE1AAEC27B00B04B6A /* LoginViewController.h */,
 				CEEDB9CF1AAEC27B00B04B6A /* LoginViewController.m */,
 				CEEDB9D01AAEC27B00B04B6A /* LoginViewController.xib */,
@@ -267,6 +280,9 @@
 				5AB149B61AAFEEA900CCCFFF /* TransactionViewController.m */,
 				5AB149B71AAFEEA900CCCFFF /* TransactionViewController.xib */,
 				5AB149BA1AAFF1BB00CCCFFF /* ContainerViewDelegate.h */,
+				042E9DFC1AB2809900B13034 /* CanvasViewController.h */,
+				042E9DFD1AB2809900B13034 /* CanvasViewController.m */,
+				042E9DFE1AB2809900B13034 /* CanvasViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -355,11 +371,13 @@
 			files = (
 				0453A09F1AACF86F00F692F9 /* LaunchScreen.xib in Resources */,
 				04E4D2011AAFB334007FE848 /* MenuViewController.xib in Resources */,
+				042E9E001AB2809900B13034 /* CanvasViewController.xib in Resources */,
 				5AB149B41AAFEE8700CCCFFF /* ProfileViewController.xib in Resources */,
 				04E4D2081AAFC800007FE848 /* MenuCell.xib in Resources */,
 				5AB149BF1AB0001400CCCFFF /* TransactionCell.xib in Resources */,
 				0453A09C1AACF86F00F692F9 /* Images.xcassets in Resources */,
 				CEEDB9D21AAEC27B00B04B6A /* LoginViewController.xib in Resources */,
+				5A3EEAEB1AB562620003D605 /* BubbleViewController.xib in Resources */,
 				CEEDB9D71AAEC3B700B04B6A /* MainViewController.xib in Resources */,
 				04E4D1FC1AAFB2DA007FE848 /* ContainerViewController.xib in Resources */,
 				5AB149B91AAFEEA900CCCFFF /* TransactionViewController.xib in Resources */,
@@ -415,6 +433,7 @@
 			files = (
 				04A9693F1AADBAD80070A862 /* Transaction.m in Sources */,
 				0453A0941AACF86F00F692F9 /* AppDelegate.m in Sources */,
+				5A3EEAEA1AB562620003D605 /* BubbleViewController.m in Sources */,
 				04E4D1FB1AAFB2DA007FE848 /* ContainerViewController.m in Sources */,
 				0453A0911AACF86F00F692F9 /* main.m in Sources */,
 				04E4D2071AAFC800007FE848 /* MenuCell.m in Sources */,
@@ -425,6 +444,7 @@
 				CEEDB9D11AAEC27B00B04B6A /* LoginViewController.m in Sources */,
 				048ED4891AAD4DF700D2E59E /* Model.xcdatamodeld in Sources */,
 				5AB149BE1AB0001400CCCFFF /* TransactionCell.m in Sources */,
+				042E9DFF1AB2809900B13034 /* CanvasViewController.m in Sources */,
 				04A969781AADC5C70070A862 /* CoreDataHelper.m in Sources */,
 				5AB149B31AAFEE8700CCCFFF /* ProfileViewController.m in Sources */,
 				04E4D2001AAFB334007FE848 /* MenuViewController.m in Sources */,

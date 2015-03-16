@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"ProfileViewController created.");
     // Do any additional setup after loading the view from its nib.
 }
 

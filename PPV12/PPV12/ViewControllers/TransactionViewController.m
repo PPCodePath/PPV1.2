@@ -20,6 +20,7 @@
 @implementation TransactionViewController
 
 - (void)viewDidLoad {
+    NSLog(@"TransactionViewController");
     [super viewDidLoad];
     self.transactionView.delegate = self;
     self.transactionView.dataSource = self;

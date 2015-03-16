@@ -6,8 +6,10 @@
 //  Copyright (c) 2015 Mamuad, Christian. All rights reserved.
 //
 
+#import "LoginViewController.h"
 #import "MenuViewController.h"
 #import "MenuCell.h"
+#import "Venmo+Enhanced.h"
 
 @interface MenuViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *menuView;
@@ -77,7 +79,10 @@
             [self.delegate closeMenu:@"transaction"];
             break;
         default:
-            //Log Out
+            [[Venmo sharedInstance] logout];
+            LoginViewController *vc = [[LoginViewController alloc] init];
+            UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+            [self presentViewController:nvc animated:YES completion:nil];
             break;
     }
 }

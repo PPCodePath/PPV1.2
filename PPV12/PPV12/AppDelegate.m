@@ -23,11 +23,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Venmo app info
     [Venmo startWithAppId:@"2431" secret:@"3XA9f8Qc99HxSR9j8mdLtv7vabS8n5yy" name:@"PayPal12"];
+    //[Venmo startWithAppId:@"2447" secret:@"Q9grujRvLk79pVX92XFY9j23Jsf6HWSA" name:@"VenmoTest"];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen]bounds]];
     VENUser *user = [[Venmo sharedInstance] session].user;
     if (user!=nil) {
-        MainViewController *mainViewController = [[MainViewController alloc] init];
+        
+        MainViewController *mainViewController = [[MainViewController alloc] initWithNewCanvasController];
         MenuViewController *menuViewController = [[MenuViewController alloc] init];
         
         UINavigationController *mainViewNavigation = [[UINavigationController alloc] initWithRootViewController:mainViewController];
@@ -84,6 +86,8 @@
 
 - (NSURL *)applicationDocumentsDirectory {
     // The directory the application uses to store the Core Data store file. This code uses a directory named "com.ppCodePath.FooBar" in the application's documents directory.
+    NSLog(@"%@",[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory  inDomains:NSUserDomainMask] lastObject]);
+
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 

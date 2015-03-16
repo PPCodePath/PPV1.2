@@ -30,11 +30,12 @@
 
 - (IBAction)loginAction:(id)sender {
     [[Venmo sharedInstance] requestPermissions:@[VENPermissionMakePayments,
-                                                 VENPermissionAccessProfile]
+                                                 VENPermissionAccessProfile,
+                                                 VENPermissionAccessFriends]
                          withCompletionHandler:^(BOOL success, NSError *error) {
                              if (success) {
                                  NSLog(@"success");
-                                 MainViewController *mainViewController = [[MainViewController alloc] init];
+                                 MainViewController *mainViewController = [[MainViewController alloc] initWithNewCanvasController];
                                  MenuViewController *menuViewController = [[MenuViewController alloc] init];
                                  
                                  UINavigationController *mainViewNavigation = [[UINavigationController alloc] initWithRootViewController:mainViewController];

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -7,8 +7,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
                 <outlet property="amountTextField" destination="LBH-SC-hAZ" id="3IE-nh-5Nh"/>
-                <outlet property="emailPhoneNumberTextField" destination="cY2-VG-KnO" id="K6e-rC-DoQ"/>
-                <outlet property="notesTextField" destination="VK0-90-QRx" id="X5L-Kh-M8j"/>
+                <outlet property="canvasContainerView" destination="hsY-gj-qUj" id="ZwK-IL-Tgj"/>
+                <outlet property="cashImageView" destination="Tmi-i4-hYZ" id="3Ox-ZI-yEY"/>
+                <outlet property="mainPanRecognizer" destination="MNq-Ke-Atm" id="ane-vP-XpK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,44 +18,56 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email or Phone number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cY2-VG-KnO">
-                    <rect key="frame" x="8" y="66" width="304" height="30"/>
+                <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" indicatorStyle="black" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="hsY-gj-qUj">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="482"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="482" id="MTf-xj-hFW"/>
+                        <constraint firstAttribute="width" constant="320" id="du1-E6-1HV"/>
+                    </constraints>
+                </scrollView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LBH-SC-hAZ">
+                    <rect key="frame" x="97" y="530" width="215" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="215" id="CfD-Pj-T1Z"/>
+                        <constraint firstAttribute="height" constant="30" id="JUw-mV-5Ct"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LBH-SC-hAZ">
-                    <rect key="frame" x="8" y="104" width="304" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Notes" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VK0-90-QRx">
-                    <rect key="frame" x="8" y="142" width="304" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0b-wD-p0x">
-                    <rect key="frame" x="282" y="180" width="30" height="30"/>
-                    <state key="normal" title="Pay">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="payAction:" destination="-1" eventType="touchUpInside" id="WK1-fd-U7R"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kT1-QO-avu">
-                    <rect key="frame" x="255" y="218" width="57" height="30"/>
-                    <state key="normal" title="Request">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="requestAction:" destination="-1" eventType="touchUpInside" id="ilN-JG-MJg"/>
-                    </connections>
-                </button>
+                <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dollar_bill" translatesAutoresizingMaskIntoConstraints="NO" id="Tmi-i4-hYZ">
+                    <rect key="frame" x="0.0" y="513" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="W6Z-hv-dfb"/>
+                        <constraint firstAttribute="height" constant="64" id="cZK-A7-BNk"/>
+                    </constraints>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="Tmi-i4-hYZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0kX-37-JIk"/>
+                <constraint firstAttribute="bottom" secondItem="Tmi-i4-hYZ" secondAttribute="bottom" id="7o0-S1-qfn"/>
+                <constraint firstAttribute="trailing" secondItem="LBH-SC-hAZ" secondAttribute="trailing" constant="8" id="Aay-dW-a7d"/>
+                <constraint firstItem="hsY-gj-qUj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Dpk-UE-MT1"/>
+                <constraint firstItem="hsY-gj-qUj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LCh-e6-rdH"/>
+                <constraint firstAttribute="bottom" secondItem="LBH-SC-hAZ" secondAttribute="bottom" constant="8" id="SM7-U1-Hkw"/>
+                <constraint firstAttribute="bottom" secondItem="Tmi-i4-hYZ" secondAttribute="bottom" id="a0b-xo-fb7"/>
+                <constraint firstAttribute="trailing" secondItem="hsY-gj-qUj" secondAttribute="trailing" id="aUe-y0-BwV"/>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="MNq-Ke-Atm" appends="YES" id="5NP-AB-yF3"/>
+            </connections>
             <point key="canvasLocation" x="413" y="447"/>
         </view>
+        <panGestureRecognizer cancelsTouchesInView="NO" minimumNumberOfTouches="1" id="MNq-Ke-Atm">
+            <connections>
+                <action selector="dragToPay:" destination="-1" id="6Fi-2i-3mC"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
+    <resources>
+        <image name="dollar_bill" width="128" height="128"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
