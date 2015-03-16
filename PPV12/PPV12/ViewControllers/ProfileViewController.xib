@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController">
             <connections>
+                <outlet property="backGroundImageView" destination="LfZ-Ek-ccu" id="jkE-yy-HL3"/>
+                <outlet property="fullNameLabel" destination="Lf8-Hq-TtL" id="zp5-qw-3Mr"/>
+                <outlet property="profileImageView" destination="78C-he-u3z" id="NNJ-4Z-Y0n"/>
+                <outlet property="userTransactionTableView" destination="1cN-yQ-ef2" id="Bwn-Mt-HRo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +17,42 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.26848014714241941" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LfZ-Ek-ccu" userLabel="backGroundImageView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="78C-he-u3z" userLabel="profileImageView">
+                    <rect key="frame" x="128" y="70" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="Grc-Gk-2r3"/>
+                        <constraint firstAttribute="height" constant="64" id="dFU-aG-jmv"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xiaolong Zhang" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lf8-Hq-TtL" userLabel="fullNameLabel">
+                    <rect key="frame" x="100" y="154" width="120" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1cN-yQ-ef2" userLabel="userTransactionTableView">
+                    <rect key="frame" x="0.0" y="198" width="320" height="370"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="LfZ-Ek-ccu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="45q-2P-jqY"/>
+                <constraint firstItem="1cN-yQ-ef2" firstAttribute="top" secondItem="Lf8-Hq-TtL" secondAttribute="bottom" constant="23" id="4yS-wu-Ba3"/>
+                <constraint firstAttribute="trailing" secondItem="1cN-yQ-ef2" secondAttribute="trailing" id="6Jc-0B-s6d"/>
+                <constraint firstAttribute="bottom" secondItem="1cN-yQ-ef2" secondAttribute="bottom" id="9OA-HG-EX1"/>
+                <constraint firstItem="LfZ-Ek-ccu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FVB-Le-lHc"/>
+                <constraint firstItem="78C-he-u3z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="KLx-Cf-LLE"/>
+                <constraint firstAttribute="bottom" secondItem="LfZ-Ek-ccu" secondAttribute="bottom" id="Rzv-n6-ixV"/>
+                <constraint firstItem="1cN-yQ-ef2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Y1R-7X-MJT"/>
+                <constraint firstAttribute="centerX" secondItem="78C-he-u3z" secondAttribute="centerX" id="Ybw-PW-z0o"/>
+                <constraint firstAttribute="centerX" secondItem="Lf8-Hq-TtL" secondAttribute="centerX" id="iQN-sC-adV"/>
+                <constraint firstItem="Lf8-Hq-TtL" firstAttribute="top" secondItem="78C-he-u3z" secondAttribute="bottom" constant="20" id="oPH-kB-r4I"/>
+                <constraint firstAttribute="trailing" secondItem="LfZ-Ek-ccu" secondAttribute="trailing" id="oTI-e0-PrQ"/>
+            </constraints>
             <point key="canvasLocation" x="287" y="375"/>
         </view>
     </objects>

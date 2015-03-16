@@ -39,6 +39,7 @@
         NSMutableOrderedSet* receiverSet = [[NSMutableOrderedSet alloc] initWithObject:receiver ];
         [self setReceiver: receiverSet];
         [self setMessage:dictionary[@"note"]];
+        [self setTransactionType:dictionary[@"action"]];
         User* sender = [[User alloc] initWithDictionary:dictionary[@"actor"]];
         NSMutableOrderedSet* senderSet = [[NSMutableOrderedSet alloc] initWithObject:sender];
         [self setSender: senderSet];

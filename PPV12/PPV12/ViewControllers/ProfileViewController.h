@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ContainerViewDelegate.h"
 @interface ProfileViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *backGroundImageView;
 @property (nonatomic, weak) id<ContainerViewDelegate> delegate;
 @end

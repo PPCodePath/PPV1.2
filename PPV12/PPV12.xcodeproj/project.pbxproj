@@ -28,10 +28,11 @@
 		5AB149B41AAFEE8700CCCFFF /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB149B21AAFEE8700CCCFFF /* ProfileViewController.xib */; };
 		5AB149B81AAFEEA900CCCFFF /* TransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB149B61AAFEEA900CCCFFF /* TransactionViewController.m */; };
 		5AB149B91AAFEEA900CCCFFF /* TransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB149B71AAFEEA900CCCFFF /* TransactionViewController.xib */; };
-		CE2C67A51AB0E8A100A7E7CF /* UserForView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C67A41AB0E8A100A7E7CF /* UserForView.m */; };
 		5AB149BE1AB0001400CCCFFF /* TransactionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB149BC1AB0001400CCCFFF /* TransactionCell.m */; };
 		5AB149BF1AB0001400CCCFFF /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB149BD1AB0001400CCCFFF /* TransactionCell.xib */; };
 		5AB149C31AB021FF00CCCFFF /* Venmo+Enhanced.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB149C21AB021FF00CCCFFF /* Venmo+Enhanced.m */; };
+		CE2C67A51AB0E8A100A7E7CF /* UserForView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C67A41AB0E8A100A7E7CF /* UserForView.m */; };
+		CECBAC971AB607E00094EC61 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = CECBAC961AB607E00094EC61 /* FXBlurView.m */; };
 		CEEDB9D11AAEC27B00B04B6A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEDB9CF1AAEC27B00B04B6A /* LoginViewController.m */; };
 		CEEDB9D21AAEC27B00B04B6A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEDB9D01AAEC27B00B04B6A /* LoginViewController.xib */; };
 		CEEDB9D61AAEC3B700B04B6A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEDB9D41AAEC3B700B04B6A /* MainViewController.m */; };
@@ -92,10 +93,10 @@
 		5AB149C21AB021FF00CCCFFF /* Venmo+Enhanced.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Venmo+Enhanced.m"; path = "PPV12/API/Venmo+Enhanced.m"; sourceTree = "<group>"; };
 		782F2EAA09FE5F5500556F53 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F9D604F0E858AB94263D40 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		CE2C67A01AB0E00500A7E7CF /* Venmo+Enhanced.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Venmo+Enhanced.h"; path = "PPV12/API/Venmo+Enhanced.h"; sourceTree = "<group>"; };
-		CE2C67A11AB0E00500A7E7CF /* Venmo+Enhanced.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Venmo+Enhanced.m"; path = "PPV12/API/Venmo+Enhanced.m"; sourceTree = "<group>"; };
 		CE2C67A31AB0E8A100A7E7CF /* UserForView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserForView.h; path = PPV12/Models/UserForView.h; sourceTree = "<group>"; };
 		CE2C67A41AB0E8A100A7E7CF /* UserForView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserForView.m; path = PPV12/Models/UserForView.m; sourceTree = "<group>"; };
+		CECBAC951AB607E00094EC61 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FXBlurView.h; path = PPV12/Helpers/FXBlurView.h; sourceTree = "<group>"; };
+		CECBAC961AB607E00094EC61 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FXBlurView.m; path = PPV12/Helpers/FXBlurView.m; sourceTree = "<group>"; };
 		CEEDB9CE1AAEC27B00B04B6A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = PPV12/ViewControllers/LoginViewController.h; sourceTree = "<group>"; };
 		CEEDB9CF1AAEC27B00B04B6A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = PPV12/ViewControllers/LoginViewController.m; sourceTree = "<group>"; };
 		CEEDB9D01AAEC27B00B04B6A /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = PPV12/ViewControllers/LoginViewController.xib; sourceTree = "<group>"; };
@@ -206,6 +207,8 @@
 		04A969751AADC55F0070A862 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				CECBAC951AB607E00094EC61 /* FXBlurView.h */,
+				CECBAC961AB607E00094EC61 /* FXBlurView.m */,
 				04A969761AADC5C70070A862 /* CoreDataHelper.h */,
 				04A969771AADC5C70070A862 /* CoreDataHelper.m */,
 			);
@@ -250,15 +253,6 @@
 				782F2EAA09FE5F5500556F53 /* libPods.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CE2C679F1AB0DBD700A7E7CF /* APIs */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C67A01AB0E00500A7E7CF /* Venmo+Enhanced.h */,
-				CE2C67A11AB0E00500A7E7CF /* Venmo+Enhanced.m */,
-			);
-			name = APIs;
 			sourceTree = "<group>";
 		};
 		CEEDB9C81AAEC24D00B04B6A /* ViewControllers */ = {
@@ -436,11 +430,11 @@
 				04E4D2071AAFC800007FE848 /* MenuCell.m in Sources */,
 				5AB149C31AB021FF00CCCFFF /* Venmo+Enhanced.m in Sources */,
 				CEEDB9D61AAEC3B700B04B6A /* MainViewController.m in Sources */,
+				CECBAC971AB607E00094EC61 /* FXBlurView.m in Sources */,
 				5AB149B81AAFEEA900CCCFFF /* TransactionViewController.m in Sources */,
 				CE2C67A51AB0E8A100A7E7CF /* UserForView.m in Sources */,
 				04A9693C1AADBAD80070A862 /* User.m in Sources */,
 				CEEDB9D11AAEC27B00B04B6A /* LoginViewController.m in Sources */,
-				CE2C67A21AB0E00500A7E7CF /* Venmo+Enhanced.m in Sources */,
 				048ED4891AAD4DF700D2E59E /* Model.xcdatamodeld in Sources */,
 				5AB149BE1AB0001400CCCFFF /* TransactionCell.m in Sources */,
 				04A969781AADC5C70070A862 /* CoreDataHelper.m in Sources */,
