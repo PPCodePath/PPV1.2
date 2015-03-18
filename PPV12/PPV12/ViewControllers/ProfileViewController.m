@@ -53,15 +53,15 @@
     
     self.fullNameLabel.text = [NSString stringWithFormat:@"%@, %@", user.firstName, user.lastName];
     
-    [self loadData:nil];
+    [self loadData:nil :NO];
     
     [self.userTransactionTableView addPullToRefreshWithActionHandler:^{
-        [self loadData:nil];
+        [self loadData:nil :NO];
     }];
     
     [self.userTransactionTableView addInfiniteScrollingWithActionHandler:^{
         // TODO: replace hard code date with the right info
-        [self loadData:@"2014-12-19T20:54:46"];
+        [self loadData:self.beforeDate :YES];
     }];
 }
 
@@ -70,22 +70,29 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)loadData:(NSString *)beforeDate {
+- (void)loadData:(NSString *)beforeDate :(BOOL)fromInfinateScroll {
     NSLog(@"loadData triggered");
-    [[Venmo sharedInstance] getTransactionsWithLimit:[NSNumber numberWithInt:30] before:beforeDate after:nil completionHandler:^(id object, BOOL success, NSError *error) {
-        if (success) {
+    if (self.beforeDate==nil && fromInfinateScroll) {
+        NSLog(@"End of scrolling");
+        [self.userTransactionTableView.infiniteScrollingView stopAnimating];
+    } else {
+        [[Venmo sharedInstance] GetTransactionListWithLimit:30 before:beforeDate after:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
             [self.userTransactionTableView.pullToRefreshView stopAnimating];
             [self.userTransactionTableView.infiniteScrollingView stopAnimating];
-            NSArray *data = object[@"data"];
-            NSString *nextString = object[@"pagination"][@"next"];
-            
+            NSArray *data = responseObject[@"data"];
             NSMutableArray *transactionList = [Transaction initWithArrayOfDictionary:data];
             self.transactions = [NSMutableArray arrayWithArray:transactionList];
+            
             [self.userTransactionTableView reloadData];
-        } else {
+            
+            NSString *nextString = responseObject[@"pagination"][@"next"];
+            NSRange startRange = [nextString rangeOfString:@"&before="];
+            NSRange searchRange = NSMakeRange(startRange.location+startRange.length, nextString.length-startRange.location-startRange.length);
+            self.beforeDate = [nextString substringWithRange:searchRange];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"fetch transaction list failed with error %@", error);
-        }
-    }];
+        }];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

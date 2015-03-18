@@ -16,4 +16,7 @@
 
 - (void)getFriendsWithLimit:(NSNumber *)limit beforeUserID:(NSString *)beforeUserID afterUserID:(NSString *)afterUserID completionHandler:(VENGenericRequestCompletionHandler) handler;
 - (void) getTransactionsWithLimit:(NSNumber *)limit before:(NSString *)beforeDate after:(NSString *)afterDate completionHandler:(VENGenericRequestCompletionHandler)handler;
+-(void)GetTransactionListWithLimit:(int)limit before:(NSString *)beforeDate after:(NSString *)afterDate
+                           success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+                           failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error)) failure;
 @end

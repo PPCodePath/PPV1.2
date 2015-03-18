@@ -27,7 +27,7 @@
     CoreDataHelper* dataHelper = [CoreDataHelper getInstance];
     self = [NSEntityDescription insertNewObjectForEntityForName:@"Transaction" inManagedObjectContext:dataHelper.context];
     if(self){
-        [self setAmount:[NSDecimalNumber decimalNumberWithString:dictionary[@"amount"]]];
+        [self setAmount:dictionary[@"amount"]];
         [self setStatus:dictionary[@"status"]];
         
         NSDateFormatter *df = [[NSDateFormatter alloc] init];
