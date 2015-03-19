@@ -63,6 +63,7 @@
         // TODO: replace hard code date with the right info
         [self loadData:self.beforeDate :YES];
     }];
+    NSLog(@"ProfileViewController created.");
 }
 
 - (void)didReceiveMemoryWarning {

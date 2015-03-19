@@ -34,6 +34,8 @@
         [self setDisplayName:dictionary[@"display_name"]];
         [self setProfileImageUrl:dictionary[@"profile_picture_url"]];
     }
+    NSError* error;
+    [dataHelper.context save:&error];
     return self;
 }
 

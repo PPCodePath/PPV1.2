@@ -11,11 +11,10 @@
 #import "ProfileViewController.h"
 #import "TransactionViewController.h"
 
-@interface ContainerViewController ()
+@interface ContainerViewController () <UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *menuView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (nonatomic) CGPoint originalCenter;
-@property (strong, nonatomic) IBOutlet UIPanGestureRecognizer *panGestureRecognizer;
 
 @end
 
@@ -42,7 +41,17 @@
     [self.contentView addSubview:self.contentViewController.view];
     [self addChildViewController:self.contentViewController];
     [self.contentViewController didMoveToParentViewController:self];
+
+    UIScreenEdgePanGestureRecognizer *leftEdgeGesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(onPanGesture:)];
+    leftEdgeGesture.edges = UIRectEdgeLeft;
+    leftEdgeGesture.delegate = self;
+    [self.view addGestureRecognizer:leftEdgeGesture];
     
+    
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return YES;
 }
 
 
@@ -88,7 +97,7 @@
         [nav setViewControllers:[NSArray arrayWithObject:pvc] animated:NO];
         self.contentViewController = nav;
     }else if([page isEqualToString:@"main"]){
-        MainViewController *mainViewController = [[MainViewController alloc] init];
+        MainViewController *mainViewController = [[MainViewController alloc] initWithNewCanvasController];
         mainViewController.delegate = self;
         UINavigationController *nav = (UINavigationController*)self.contentViewController;
         [nav setViewControllers:[NSArray arrayWithObject:mainViewController] animated:NO];
