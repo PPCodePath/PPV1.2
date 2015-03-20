@@ -79,16 +79,34 @@
     } else {
         [[Venmo sharedInstance] GetTransactionListWithLimit:30 before:beforeDate after:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
             [self.userTransactionTableView.pullToRefreshView stopAnimating];
-            [self.userTransactionTableView.infiniteScrollingView stopAnimating];
+            if (fromInfinateScroll) {
+                [self.userTransactionTableView.infiniteScrollingView stopAnimating];
+            }
             NSArray *data = responseObject[@"data"];
             NSMutableArray *transactionList = [Transaction initWithArrayOfDictionary:data];
-            self.transactions = [NSMutableArray arrayWithArray:transactionList];
-            
+            if (self.transactions) {
+                [self.transactions addObjectsFromArray:transactionList];
+            } else {
+                self.transactions = [NSMutableArray arrayWithArray:transactionList];
+            }
             [self.userTransactionTableView reloadData];
             
             NSString *nextString = responseObject[@"pagination"][@"next"];
-            NSRange startRange = [nextString rangeOfString:@"&before="];
-            NSRange searchRange = NSMakeRange(startRange.location+startRange.length, nextString.length-startRange.location-startRange.length);
+            
+            NSRange startRange;
+            NSRange endRange;
+            NSRange searchRange;
+            if ([nextString isKindOfClass:[NSNull class]]) {
+                nextString = responseObject[@"pagination"][@"previous"];
+                startRange = [nextString rangeOfString:@"after="];
+                endRange = [nextString rangeOfString:@"&limit"];
+                searchRange = NSMakeRange(startRange.location+startRange.length, nextString.length-startRange.location-startRange.length-endRange.length);
+            } else {
+                startRange = [nextString rangeOfString:@"&before="];
+                endRange = [nextString rangeOfString:nextString];
+                searchRange = NSMakeRange(startRange.location+startRange.length, nextString.length-startRange.location-startRange.length);
+            }
+            
             self.beforeDate = [nextString substringWithRange:searchRange];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"fetch transaction list failed with error %@", error);
