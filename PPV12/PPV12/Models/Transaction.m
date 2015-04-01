@@ -27,7 +27,7 @@
     CoreDataHelper* dataHelper = [CoreDataHelper getInstance];
     self = [NSEntityDescription insertNewObjectForEntityForName:@"Transaction" inManagedObjectContext:dataHelper.context];
     if(self){
-        [self setAmount:[NSDecimalNumber decimalNumberWithString:dictionary[@"amount"]]];
+        [self setAmount:dictionary[@"amount"]];
         [self setStatus:dictionary[@"status"]];
         
         NSDateFormatter *df = [[NSDateFormatter alloc] init];
@@ -39,6 +39,7 @@
         NSMutableOrderedSet* receiverSet = [[NSMutableOrderedSet alloc] initWithObject:receiver ];
         [self setReceiver: receiverSet];
         [self setMessage:dictionary[@"note"]];
+        [self setTransactionType:dictionary[@"action"]];
         User* sender = [[User alloc] initWithDictionary:dictionary[@"actor"]];
         NSMutableOrderedSet* senderSet = [[NSMutableOrderedSet alloc] initWithObject:sender];
         [self setSender: senderSet];

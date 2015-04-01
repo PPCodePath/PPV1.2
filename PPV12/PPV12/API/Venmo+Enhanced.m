@@ -7,6 +7,7 @@
 //
 
 #import "Venmo+Enhanced.h"
+#import "AFNetworking.h"
 
 @implementation Venmo (Enhanced)
 
@@ -51,6 +52,34 @@
         handler(response, NO, error);
     }];
 }
+
+-(void)GetTransactionListWithLimit:(int)limit before:(NSString *)beforeDate after:(NSString *)afterDate
+                           success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+                           failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error)) failure
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSString *accessToken = [NSString stringWithFormat:@"Bearer %@", [[Venmo sharedInstance] session].accessToken];
+    NSString *baseUrl = @"https://api.venmo.com/v1/payments";
+    NSString *url;
+    if (beforeDate) {
+        url = [NSString stringWithFormat:@"%@?limit=%d&before=%@", baseUrl, limit, beforeDate];
+    } else {
+        url = [NSString stringWithFormat:@"%@?limit=%d", baseUrl, limit];
+    }
+    
+    [manager.requestSerializer setValue:accessToken forHTTPHeaderField:@"Authorization"];
+    [manager GET:url
+      parameters:nil
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             success(operation, responseObject);
+             NSLog(@"JSON: %@", responseObject);
+         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             failure(operation, error);
+             NSLog(@"Error: %@", error);
+         }];
+}
+
+
 
 
 @end

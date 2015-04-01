@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *amount;
 @property (weak, nonatomic) IBOutlet UILabel *message;
 @property (weak, nonatomic) IBOutlet UILabel *transactionDisplay;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 
 @end
